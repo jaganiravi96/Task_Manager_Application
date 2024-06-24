@@ -32,10 +32,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         src/Model/idsequence.h src/Model/idsequence.cpp
         src/Model/task.h src/Model/task.cpp
-        src/Repository/test.txt
         src/Service/fileutils.h src/Service/fileutils.cpp
         src/Service/strutils.h src/Service/strutils.cpp
         src/Service/taskservice.h src/Service/taskservice.cpp
+        src/Repository/test.h src/Repository/test.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Task_Manager_Application APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
