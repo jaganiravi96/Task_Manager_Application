@@ -161,6 +161,14 @@ build CMakeFiles/Task_Manager_Application.dir/src/Service/taskservice.cpp.obj: C
   OBJECT_DIR = CMakeFiles\Task_Manager_Application.dir
   OBJECT_FILE_DIR = CMakeFiles\Task_Manager_Application.dir\src\Service
 
+build CMakeFiles/Task_Manager_Application.dir/src/Repository/test.cpp.obj: CXX_COMPILER__Task_Manager_Application_unscanned_Debug E$:/C++_Project/QT_Project/Task_Manager_Application/src/Repository/test.cpp || cmake_object_order_depends_target_Task_Manager_Application
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Task_Manager_Application.dir\src\Repository\test.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IE:/C++_Project/QT_Project/Task_Manager_Application/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/Task_Manager_Application_autogen/include -isystem C:/Qt/6.7.1/mingw_64/include/QtCore -isystem C:/Qt/6.7.1/mingw_64/include -isystem C:/Qt/6.7.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Task_Manager_Application.dir
+  OBJECT_FILE_DIR = CMakeFiles\Task_Manager_Application.dir\src\Repository
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Task_Manager_Application
@@ -169,7 +177,7 @@ build CMakeFiles/Task_Manager_Application.dir/src/Service/taskservice.cpp.obj: C
 #############################################
 # Link the executable Task_Manager_Application.exe
 
-build Task_Manager_Application.exe: CXX_EXECUTABLE_LINKER__Task_Manager_Application_Debug CMakeFiles/Task_Manager_Application.dir/Task_Manager_Application_autogen/mocs_compilation.cpp.obj CMakeFiles/Task_Manager_Application.dir/main.cpp.obj CMakeFiles/Task_Manager_Application.dir/mainwindow.cpp.obj CMakeFiles/Task_Manager_Application.dir/addtask.cpp.obj CMakeFiles/Task_Manager_Application.dir/updatetask.cpp.obj CMakeFiles/Task_Manager_Application.dir/deletetask.cpp.obj CMakeFiles/Task_Manager_Application.dir/displayalltask.cpp.obj CMakeFiles/Task_Manager_Application.dir/gettask.cpp.obj CMakeFiles/Task_Manager_Application.dir/generatereport.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Model/idsequence.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Model/task.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Service/fileutils.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Service/strutils.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Service/taskservice.cpp.obj | C$:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.1/mingw_64/lib/libQt6EntryPoint.a || Task_Manager_Application_autogen Task_Manager_Application_autogen_timestamp_deps
+build Task_Manager_Application.exe: CXX_EXECUTABLE_LINKER__Task_Manager_Application_Debug CMakeFiles/Task_Manager_Application.dir/Task_Manager_Application_autogen/mocs_compilation.cpp.obj CMakeFiles/Task_Manager_Application.dir/main.cpp.obj CMakeFiles/Task_Manager_Application.dir/mainwindow.cpp.obj CMakeFiles/Task_Manager_Application.dir/addtask.cpp.obj CMakeFiles/Task_Manager_Application.dir/updatetask.cpp.obj CMakeFiles/Task_Manager_Application.dir/deletetask.cpp.obj CMakeFiles/Task_Manager_Application.dir/displayalltask.cpp.obj CMakeFiles/Task_Manager_Application.dir/gettask.cpp.obj CMakeFiles/Task_Manager_Application.dir/generatereport.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Model/idsequence.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Model/task.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Service/fileutils.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Service/strutils.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Service/taskservice.cpp.obj CMakeFiles/Task_Manager_Application.dir/src/Repository/test.cpp.obj | C$:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.1/mingw_64/lib/libQt6EntryPoint.a || Task_Manager_Application_autogen Task_Manager_Application_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.7.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

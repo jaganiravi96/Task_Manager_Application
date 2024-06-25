@@ -87,7 +87,7 @@
      <widget class="QLineEdit" name="txtAssignee"/>
     </item>
     <item row="2" column="1">
-     <widget class="QDateEdit" name="dtDueDate"/>
+     <widget class="QDateTimeEdit" name="dtDueDate"/>
     </item>
    </layout>
   </widget>

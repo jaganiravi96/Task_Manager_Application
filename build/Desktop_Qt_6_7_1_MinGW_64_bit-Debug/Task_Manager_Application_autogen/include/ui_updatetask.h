@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QLabel>
@@ -35,11 +36,11 @@ public:
     QLabel *label_5;
     QLabel *label_7;
     QLabel *label_8;
-    QLineEdit *txtDueDateValue;
     QLineEdit *txtPriorityValue;
     QLineEdit *txtAssigneeValue;
     QLineEdit *txtStatusvalue;
     QLineEdit *txtTaskIdValue;
+    QDateTimeEdit *dtDateValue;
     QLabel *label;
     QPushButton *btnFind;
     QLineEdit *txtTaskIdFind;
@@ -102,11 +103,6 @@ public:
 
         formLayout->setWidget(5, QFormLayout::LabelRole, label_8);
 
-        txtDueDateValue = new QLineEdit(formLayoutWidget);
-        txtDueDateValue->setObjectName("txtDueDateValue");
-
-        formLayout->setWidget(3, QFormLayout::FieldRole, txtDueDateValue);
-
         txtPriorityValue = new QLineEdit(formLayoutWidget);
         txtPriorityValue->setObjectName("txtPriorityValue");
 
@@ -126,6 +122,11 @@ public:
         txtTaskIdValue->setObjectName("txtTaskIdValue");
 
         formLayout->setWidget(0, QFormLayout::FieldRole, txtTaskIdValue);
+
+        dtDateValue = new QDateTimeEdit(formLayoutWidget);
+        dtDateValue->setObjectName("dtDateValue");
+
+        formLayout->setWidget(3, QFormLayout::FieldRole, dtDateValue);
 
         label = new QLabel(UpdateTask);
         label->setObjectName("label");

@@ -11,7 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QDateEdit>
+#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QLabel>
@@ -38,7 +38,7 @@ public:
     QLineEdit *txtStatus;
     QLabel *label_4;
     QLineEdit *txtAssignee;
-    QDateEdit *dtDueDate;
+    QDateTimeEdit *dtDueDate;
     QPushButton *btnReset;
     QPushButton *btnSave;
     QLabel *txtStatus_2;
@@ -110,7 +110,7 @@ public:
 
         formLayout->setWidget(5, QFormLayout::FieldRole, txtAssignee);
 
-        dtDueDate = new QDateEdit(formLayoutWidget);
+        dtDueDate = new QDateTimeEdit(formLayoutWidget);
         dtDueDate->setObjectName("dtDueDate");
 
         formLayout->setWidget(2, QFormLayout::FieldRole, dtDueDate);

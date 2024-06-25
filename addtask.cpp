@@ -1,4 +1,7 @@
 #include "addtask.h"
+#include "src/Model/task.h"
+#include "src/Service/strutils.h"
+#include "src/Service/taskservice.h"
 #include "ui_addtask.h"
 
 AddTask::AddTask(QWidget *parent)
@@ -17,23 +20,32 @@ void AddTask::on_btnSave_clicked()
 {
     qDebug()<<"in AddTask:: on_btnSave_clicked()";
 
-    QString sTitle       = ui->txtTitle->text();
-    QString sDescription = ui->txtDescription->toPlainText();
-    QDate sDate          = ui->dtDueDate->date();
-    QString sPriority    = ui ->txtPriority->text();
-    QString sStatus      = ui->txtStatus->text();
-    QString sAssignee    = ui->txtAssignee->text();
+    QString sTitle           = ui->txtTitle->text();
+    QString sDescription     = ui->txtDescription->toPlainText();
+    QDateTime sDateTime      = ui->dtDueDate->dateTime();
+    QString sPriority        = ui->txtPriority->text();
+    QString sStatus          = ui->txtStatus->text();
+    QString sAssignee        = ui->txtAssignee->text();
 
-    if(sTitle.isEmpty() && sDate.isNull())
+    if(sTitle.isEmpty() && sDateTime.isNull())
     {
         qDebug() << "Title and Due Date is Empty";
         ui->txtStatus->setText("Please Provide Valid Details!");
     }
     else
     {
-        qDebug() << "read was successful : Tile" << sTitle << " Descro";
+        qDebug() << "read was successful : Title" << sTitle.toUtf8().constData();
+        strUtils ut;
+        time_t temp =  ut.strToTime(sDateTime.toString("yyyy-MM-dd hh:mm:ss").toStdString());
+        Task task(sTitle.toUtf8().constData(), sDescription.toUtf8().constData(), temp, sPriority.toUtf8().constData(),
+                  sStatus.toUtf8().constData(), sAssignee.toUtf8().constData());
+        qDebug() << "TaskID : " << task.getTaskId() << " | Title : " << task.getTitle() << " | Description : " << task.getDescription()
+                 << " | DueDate " << ut.timeToStr(task.getDueDate()) << " | Priority :" << task.getPriority()
+                 << " | Status :" << task.getStatus() << " | Assignee :" << task.getAssignee();
+        taskService taskservice;
+        taskservice.addTask(task);
         resetAllElements();
-        ui->txtStatus->setText("Task Added Successfully!");
+        ui->txtStatus_2->setText("Task Added Successfully!");
     }
 }
 

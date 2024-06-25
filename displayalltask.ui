@@ -19,26 +19,6 @@
   <property name="windowTitle">
    <string>Display All Task</string>
   </property>
-  <widget class="QDateEdit" name="dtToDate">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>10</y>
-     <width>131</width>
-     <height>29</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="dtFromDate">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>10</y>
-     <width>131</width>
-     <height>29</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -55,8 +35,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>10</y>
+     <x>20</x>
+     <y>50</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -68,10 +48,10 @@
   <widget class="QPushButton" name="btnDisplay">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>10</y>
-     <width>83</width>
-     <height>29</height>
+     <x>320</x>
+     <y>20</y>
+     <width>81</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -82,10 +62,43 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>50</y>
+     <y>90</y>
      <width>511</width>
-     <height>551</height>
+     <height>511</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="dtToDate">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>10</y>
+     <width>194</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="dtFromDate">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>50</y>
+     <width>194</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnDisplay_2">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>20</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reset</string>
    </property>
   </widget>
  </widget>

@@ -305,6 +305,12 @@
 			null
 		],
 		[
+			"E:/C++_Project/QT_Project/Task_Manager_Application/src/Repository/test.h",
+			"MU",
+			"NUUEGJZ23L/moc_test.cpp",
+			null
+		],
+		[
 			"E:/C++_Project/QT_Project/Task_Manager_Application/src/Service/fileutils.h",
 			"MU",
 			"WPGHVKM5IL/moc_fileutils.cpp",
@@ -442,6 +448,11 @@
 		],
 		[
 			"E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/task.cpp",
+			"MU",
+			null
+		],
+		[
+			"E:/C++_Project/QT_Project/Task_Manager_Application/src/Repository/test.cpp",
 			"MU",
 			null
 		],

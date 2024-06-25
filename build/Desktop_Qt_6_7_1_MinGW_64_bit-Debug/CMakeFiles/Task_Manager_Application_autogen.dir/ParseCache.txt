@@ -2490,6 +2490,7 @@ E:/C++_Project/QT_Project/Task_Manager_Application/displayalltask.cpp
 E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/task.cpp
 E:/C++_Project/QT_Project/Task_Manager_Application/generatereport.cpp
  uic:ui_generatereport.h
+E:/C++_Project/QT_Project/Task_Manager_Application/src/Repository/test.h
 E:/C++_Project/QT_Project/Task_Manager_Application/main.cpp
 E:/C++_Project/QT_Project/Task_Manager_Application/mainwindow.cpp
  uic:./ui_mainwindow.h
@@ -2497,3 +2498,4 @@ E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/idsequence.cpp
 E:/C++_Project/QT_Project/Task_Manager_Application/src/Service/fileutils.cpp
 E:/C++_Project/QT_Project/Task_Manager_Application/src/Service/strutils.cpp
 E:/C++_Project/QT_Project/Task_Manager_Application/src/Service/taskservice.cpp
+E:/C++_Project/QT_Project/Task_Manager_Application/src/Repository/test.cpp
