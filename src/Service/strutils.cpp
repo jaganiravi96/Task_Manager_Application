@@ -116,7 +116,7 @@ void strUtils::eraseFileLine(string path, int taskId)
 }
 
 // To replace line from the file for given taskId
-string strUtils::replaceFileLine(string path, int taskId, string newline)
+string strUtils::replaceFileLine(string file_path, string path, int taskId, string newline)
 {
     string line;
     ifstream fin;
@@ -125,7 +125,7 @@ string strUtils::replaceFileLine(string path, int taskId, string newline)
     // contents of path must be copied to a temp file then
     // renamed back to the path file
     ofstream temp;
-    temp.open("temp.txt");
+    temp.open(file_path+"\\temp.txt");
 
     while (getline(fin, line))
     {
@@ -194,4 +194,34 @@ Task strUtils::convertStrToTask(string taskStr)
     t.setAssignee(str);
 
     return t;
+}
+
+string strUtils::getDateOneMonthAgo()
+{
+    // Get current time
+    auto now = std::chrono::system_clock::now();
+
+    // Convert to time_t (seconds since epoch)
+    std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
+
+    // Get struct tm for current time
+    struct std::tm* currentTm = std::localtime(&currentTime);
+
+    // Calculate one month ago
+    currentTm->tm_mon -= 1;
+    if (currentTm->tm_mon < 0) {
+        currentTm->tm_mon += 12;
+        currentTm->tm_year -= 1;
+    }
+
+    // Convert back to time_t
+    std::time_t oneMonthAgoTime = std::mktime(currentTm);
+
+    // Get struct tm for one month ago
+    struct std::tm* oneMonthAgoTm = std::localtime(&oneMonthAgoTime);
+
+    // Format date as YYYY-MM-DD
+    std::ostringstream oss;
+    oss << std::put_time(oneMonthAgoTm, "%Y-%m-%d");
+    return oss.str();
 }

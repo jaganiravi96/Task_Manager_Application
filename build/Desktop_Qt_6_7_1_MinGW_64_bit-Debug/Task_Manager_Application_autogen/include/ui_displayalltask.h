@@ -16,7 +16,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QTableWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -26,10 +26,10 @@ public:
     QLabel *label;
     QLabel *label_2;
     QPushButton *btnDisplay;
-    QTableView *tableView;
     QDateTimeEdit *dtToDate;
     QDateTimeEdit *dtFromDate;
-    QPushButton *btnDisplay_2;
+    QPushButton *btnReset;
+    QTableWidget *tableWidget;
 
     void setupUi(QDialog *DisplayAllTask)
     {
@@ -46,18 +46,18 @@ public:
         btnDisplay = new QPushButton(DisplayAllTask);
         btnDisplay->setObjectName("btnDisplay");
         btnDisplay->setGeometry(QRect(320, 20, 81, 41));
-        tableView = new QTableView(DisplayAllTask);
-        tableView->setObjectName("tableView");
-        tableView->setGeometry(QRect(20, 90, 511, 511));
         dtToDate = new QDateTimeEdit(DisplayAllTask);
         dtToDate->setObjectName("dtToDate");
         dtToDate->setGeometry(QRect(100, 10, 194, 29));
         dtFromDate = new QDateTimeEdit(DisplayAllTask);
         dtFromDate->setObjectName("dtFromDate");
         dtFromDate->setGeometry(QRect(100, 50, 194, 29));
-        btnDisplay_2 = new QPushButton(DisplayAllTask);
-        btnDisplay_2->setObjectName("btnDisplay_2");
-        btnDisplay_2->setGeometry(QRect(420, 20, 81, 41));
+        btnReset = new QPushButton(DisplayAllTask);
+        btnReset->setObjectName("btnReset");
+        btnReset->setGeometry(QRect(420, 20, 81, 41));
+        tableWidget = new QTableWidget(DisplayAllTask);
+        tableWidget->setObjectName("tableWidget");
+        tableWidget->setGeometry(QRect(20, 90, 521, 531));
 
         retranslateUi(DisplayAllTask);
 
@@ -70,7 +70,7 @@ public:
         label->setText(QCoreApplication::translate("DisplayAllTask", "To Date", nullptr));
         label_2->setText(QCoreApplication::translate("DisplayAllTask", "From Date", nullptr));
         btnDisplay->setText(QCoreApplication::translate("DisplayAllTask", "Display", nullptr));
-        btnDisplay_2->setText(QCoreApplication::translate("DisplayAllTask", "Reset", nullptr));
+        btnReset->setText(QCoreApplication::translate("DisplayAllTask", "Reset", nullptr));
     } // retranslateUi
 
 };

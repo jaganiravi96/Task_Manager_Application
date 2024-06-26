@@ -2,6 +2,7 @@
 #define TASKSERVICE_H
 
 #include <string>
+#include <list>
 #include "../Model/task.h"
 
 class taskService
@@ -9,15 +10,17 @@ class taskService
 public:
     taskService();
 
-    void addTask(Task t);
+    string addTask(Task t);
 
-    void displayAllTask(string from_date = "", string to_date = "", string specific_date = "");
+    list<Task> displayAllTask(string from_date = "", string to_date = "", string specific_date = "");
 
     Task getTask(int TaskId);
 
     void deleteTask(int TaskId);
 
     void updateTask(Task t);
+
+    list<string> getAllFilePaths(string directory);
 };
 
 #endif // TASKSERVICE_H

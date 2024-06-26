@@ -18,7 +18,7 @@ public:
 private slots:
     void on_btnDisplay_clicked();
 
-    void on_btnDisplay_2_clicked();
+    void on_btnReset_clicked();
 
 private:
     Ui::DisplayAllTask *ui;

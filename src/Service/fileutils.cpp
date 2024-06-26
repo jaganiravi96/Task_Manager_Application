@@ -10,7 +10,7 @@ fileUtils::fileUtils() {}
 strUtils ut;
 string file_path = "E:\\C++_Project\\QT_Project\\Task_Manager_Application\\src\\Repository";
 
-void fileUtils::writeRecord(string filetext)
+string fileUtils::writeRecord(string filetext)
 {
     cout << "\n ###### In fileUtils::writeRecord ###### \n";
     ofstream outputFile;
@@ -27,7 +27,7 @@ void fileUtils::writeRecord(string filetext)
     {
         cerr << "Error opening file\n";
     }
-    return;
+    return "true";
 }
 
 Task fileUtils::getRecord(int TaskId)
@@ -110,5 +110,5 @@ void fileUtils::updateRecord(int TaskId, string date, Task t)
     string newline;
     newline = ut.convertTaskToStr(t);
     cout << newline + "\n";
-    ut.replaceFileLine(file_name, TaskId, newline);
+    ut.replaceFileLine(file_path, file_name, TaskId, newline);
 }

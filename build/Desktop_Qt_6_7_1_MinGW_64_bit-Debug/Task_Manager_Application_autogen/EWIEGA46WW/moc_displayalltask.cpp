@@ -38,7 +38,7 @@ constexpr auto qt_meta_stringdata_CLASSDisplayAllTaskENDCLASS = QtMocHelpers::st
     "DisplayAllTask",
     "on_btnDisplay_clicked",
     "",
-    "on_btnDisplay_2_clicked"
+    "on_btnReset_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -80,7 +80,7 @@ Q_CONSTINIT const QMetaObject DisplayAllTask::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<DisplayAllTask, std::true_type>,
         // method 'on_btnDisplay_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_btnDisplay_2_clicked'
+        // method 'on_btnReset_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -93,7 +93,7 @@ void DisplayAllTask::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         (void)_t;
         switch (_id) {
         case 0: _t->on_btnDisplay_clicked(); break;
-        case 1: _t->on_btnDisplay_2_clicked(); break;
+        case 1: _t->on_btnReset_clicked(); break;
         default: ;
         }
     }

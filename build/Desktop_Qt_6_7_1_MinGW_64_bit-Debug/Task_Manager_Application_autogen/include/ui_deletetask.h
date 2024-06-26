@@ -16,7 +16,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QTableWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -26,9 +26,9 @@ public:
     QLabel *label;
     QLineEdit *txtTaskIdDelete;
     QPushButton *btnFind;
-    QTableView *tableViewDelete;
     QPushButton *btnDelete;
     QLabel *tstStatus;
+    QTableWidget *tableWidget;
 
     void setupUi(QDialog *DeleteTask)
     {
@@ -45,15 +45,15 @@ public:
         btnFind = new QPushButton(DeleteTask);
         btnFind->setObjectName("btnFind");
         btnFind->setGeometry(QRect(300, 20, 83, 29));
-        tableViewDelete = new QTableView(DeleteTask);
-        tableViewDelete->setObjectName("tableViewDelete");
-        tableViewDelete->setGeometry(QRect(30, 70, 451, 231));
         btnDelete = new QPushButton(DeleteTask);
         btnDelete->setObjectName("btnDelete");
         btnDelete->setGeometry(QRect(190, 320, 83, 29));
         tstStatus = new QLabel(DeleteTask);
         tstStatus->setObjectName("tstStatus");
-        tstStatus->setGeometry(QRect(110, 360, 261, 20));
+        tstStatus->setGeometry(QRect(90, 360, 301, 20));
+        tableWidget = new QTableWidget(DeleteTask);
+        tableWidget->setObjectName("tableWidget");
+        tableWidget->setGeometry(QRect(20, 60, 461, 251));
 
         retranslateUi(DeleteTask);
 

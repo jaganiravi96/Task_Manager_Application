@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <filesystem>
 
 #include "../Model/task.h"
 #include "../Service/fileutils.h"
@@ -12,16 +13,17 @@ using namespace std;
 taskService::taskService() {}
 fileUtils fileutil;
 strUtils strutil;
+namespace fs = std::filesystem;
 
-void taskService::addTask(Task t)
+string taskService::addTask(Task t)
 {
     cout << "\n ###### In addTask() ###### \n";
     string record = strutil.convertTaskToStr(t);
     fileutil.writeRecord(record);
-    return;
+    return "true";
 }
 
-void taskService::displayAllTask(string from_date, string to_date, string specific_date)
+list<Task> taskService::displayAllTask(string from_date, string to_date, string specific_date)
 {
     cout << "\n ###### In displayTasks() ###### \n";
     list<Task> task_list = fileutil.readAllRecord(from_date, to_date, specific_date);
@@ -34,6 +36,7 @@ void taskService::displayAllTask(string from_date, string to_date, string specif
         cout << endl;
     }
     cout << endl;
+    return task_list;
 }
 
 Task taskService::getTask(int TaskId)
@@ -61,5 +64,22 @@ void taskService::updateTask(Task t)
     fileutil.updateRecord(TaskId, strutil.taskIdToStrDate(TaskId), t);
     cout << "Updated Task with Id :" + to_string(TaskId) + "\n";
 }
+
+list<string> taskService::getAllFilePaths(string directory)
+{
+    list<string> filePaths;
+    // Iterate through the directory
+    for (const auto& entry : fs::directory_iterator(directory)) {
+        // Check if it's a regular file
+        if (entry.is_regular_file()) {
+            // Add absolute file path to the list
+            filePaths.push_back(entry.path().string());
+        }
+    }
+    return filePaths;
+}
+
+
+
 
 

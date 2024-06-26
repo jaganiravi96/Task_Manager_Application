@@ -37,9 +37,9 @@ void UpdateTask::on_btnFind_clicked()
         ui->txtTitleValue->setText(QString::fromStdString(task.getTitle()));
         ui->txtDescriptionValue->setPlainText(QString::fromStdString(task.getDescription()));
         ui->dtDueDateValue->setDateTime(QDateTime::fromSecsSinceEpoch(task.getDueDate()));
-        ui->txtPriorityValue->setText(QString::fromStdString(task.getTitle()));
-        ui->txtStatusValue->setText(QString::fromStdString(task.getTitle()));
-        ui->txtAssigneeValue->setText(QString::fromStdString(task.getTitle()));
+        ui->txtPriorityValue->setText(QString::fromStdString(task.getPriority()));
+        ui->txtStatusValue->setText(QString::fromStdString(task.getStatus()));
+        ui->txtAssigneeValue->setText(QString::fromStdString(task.getAssignee()));
     }
 
 }

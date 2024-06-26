@@ -1410,6 +1410,7 @@ E:/C++_Project/QT_Project/Task_Manager_Application/generatereport.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:E:/C++_Project/QT_Project/Task_Manager_Application/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/Task_Manager_Application_autogen/moc_predefs.h
  mdp:E:/C++_Project/QT_Project/Task_Manager_Application/generatereport.h
+ mdp:E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/task.h
 E:/C++_Project/QT_Project/Task_Manager_Application/gettask.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.7.1/mingw_64/include/QtCore/q20functional.h
@@ -2125,6 +2126,7 @@ E:/C++_Project/QT_Project/Task_Manager_Application/mainwindow.h
  mdp:E:/C++_Project/QT_Project/Task_Manager_Application/generatereport.h
  mdp:E:/C++_Project/QT_Project/Task_Manager_Application/gettask.h
  mdp:E:/C++_Project/QT_Project/Task_Manager_Application/mainwindow.h
+ mdp:E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/task.h
  mdp:E:/C++_Project/QT_Project/Task_Manager_Application/updatetask.h
 E:/C++_Project/QT_Project/Task_Manager_Application/src/Service/fileutils.h
 E:/C++_Project/QT_Project/Task_Manager_Application/src/Service/strutils.h

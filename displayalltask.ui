@@ -58,16 +58,6 @@
     <string>Display</string>
    </property>
   </widget>
-  <widget class="QTableView" name="tableView">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>511</width>
-     <height>511</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QDateTimeEdit" name="dtToDate">
    <property name="geometry">
     <rect>
@@ -88,7 +78,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="btnDisplay_2">
+  <widget class="QPushButton" name="btnReset">
    <property name="geometry">
     <rect>
      <x>420</x>
@@ -99,6 +89,16 @@
    </property>
    <property name="text">
     <string>Reset</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>521</width>
+     <height>531</height>
+    </rect>
    </property>
   </widget>
  </widget>

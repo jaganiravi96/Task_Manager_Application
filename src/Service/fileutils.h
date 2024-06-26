@@ -10,7 +10,7 @@ class fileUtils
 public:
     fileUtils();
 
-    void writeRecord(string filetext);
+    string writeRecord(string filetext);
 
     Task getRecord(int TaskId);
 

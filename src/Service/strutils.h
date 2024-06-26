@@ -5,6 +5,9 @@
 #include <ctime>
 #include <list>
 #include <time.h>
+#include <chrono>
+#include <ctime>
+#include <iomanip>
 #include "../Model/task.h"
 
 class strUtils
@@ -22,11 +25,13 @@ public:
 
     void eraseFileLine(string path, int taskId);
 
-    string replaceFileLine(string path, int taskId, string newline);
+    string replaceFileLine(string filepath, string path, int taskId, string newline);
 
     string convertTaskToStr(Task t);
 
     Task convertStrToTask(string taskStr);
+
+    std::string getDateOneMonthAgo();
 };
 
 #endif // STRUTILS_H
