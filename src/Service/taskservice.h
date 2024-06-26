@@ -13,7 +13,7 @@ public:
 
     void displayAllTask(string from_date = "", string to_date = "", string specific_date = "");
 
-    void getTask(int TaskId);
+    Task getTask(int TaskId);
 
     void deleteTask(int TaskId);
 

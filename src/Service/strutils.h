@@ -22,7 +22,7 @@ public:
 
     void eraseFileLine(string path, int taskId);
 
-    void replaceFileLine(string path, int taskId, string newline);
+    string replaceFileLine(string path, int taskId, string newline);
 
     string convertTaskToStr(Task t);
 

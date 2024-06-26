@@ -29,7 +29,7 @@ public:
 
     string getTitle();
 
-    void setDescription(string &description);
+    void setDescription(string &desc);
 
     string getDescription();
 

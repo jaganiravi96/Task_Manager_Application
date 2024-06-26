@@ -38,19 +38,20 @@ public:
     QLabel *label_8;
     QLineEdit *txtPriorityValue;
     QLineEdit *txtAssigneeValue;
-    QLineEdit *txtStatusvalue;
+    QLineEdit *txtStatusValue;
     QLineEdit *txtTaskIdValue;
-    QDateTimeEdit *dtDateValue;
+    QDateTimeEdit *dtDueDateValue;
     QLabel *label;
     QPushButton *btnFind;
     QLineEdit *txtTaskIdFind;
     QPushButton *btnUpdate;
+    QLabel *txtStatus;
 
     void setupUi(QDialog *UpdateTask)
     {
         if (UpdateTask->objectName().isEmpty())
             UpdateTask->setObjectName("UpdateTask");
-        UpdateTask->resize(400, 479);
+        UpdateTask->resize(400, 500);
         UpdateTask->setMaximumSize(QSize(400, 500));
         formLayoutWidget = new QWidget(UpdateTask);
         formLayoutWidget->setObjectName("formLayoutWidget");
@@ -113,20 +114,20 @@ public:
 
         formLayout->setWidget(5, QFormLayout::FieldRole, txtAssigneeValue);
 
-        txtStatusvalue = new QLineEdit(formLayoutWidget);
-        txtStatusvalue->setObjectName("txtStatusvalue");
+        txtStatusValue = new QLineEdit(formLayoutWidget);
+        txtStatusValue->setObjectName("txtStatusValue");
 
-        formLayout->setWidget(6, QFormLayout::FieldRole, txtStatusvalue);
+        formLayout->setWidget(6, QFormLayout::FieldRole, txtStatusValue);
 
         txtTaskIdValue = new QLineEdit(formLayoutWidget);
         txtTaskIdValue->setObjectName("txtTaskIdValue");
 
         formLayout->setWidget(0, QFormLayout::FieldRole, txtTaskIdValue);
 
-        dtDateValue = new QDateTimeEdit(formLayoutWidget);
-        dtDateValue->setObjectName("dtDateValue");
+        dtDueDateValue = new QDateTimeEdit(formLayoutWidget);
+        dtDueDateValue->setObjectName("dtDueDateValue");
 
-        formLayout->setWidget(3, QFormLayout::FieldRole, dtDateValue);
+        formLayout->setWidget(3, QFormLayout::FieldRole, dtDueDateValue);
 
         label = new QLabel(UpdateTask);
         label->setObjectName("label");
@@ -139,7 +140,10 @@ public:
         txtTaskIdFind->setGeometry(QRect(100, 10, 131, 28));
         btnUpdate = new QPushButton(UpdateTask);
         btnUpdate->setObjectName("btnUpdate");
-        btnUpdate->setGeometry(QRect(200, 430, 81, 31));
+        btnUpdate->setGeometry(QRect(150, 420, 81, 31));
+        txtStatus = new QLabel(UpdateTask);
+        txtStatus->setObjectName("txtStatus");
+        txtStatus->setGeometry(QRect(112, 460, 151, 31));
 
         retranslateUi(UpdateTask);
 
@@ -159,6 +163,7 @@ public:
         label->setText(QCoreApplication::translate("UpdateTask", "Task Id", nullptr));
         btnFind->setText(QCoreApplication::translate("UpdateTask", "Find", nullptr));
         btnUpdate->setText(QCoreApplication::translate("UpdateTask", "Update", nullptr));
+        txtStatus->setText(QString());
     } // retranslateUi
 
 };

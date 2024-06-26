@@ -5,4 +5,5 @@
 #include "EWIEGA46WW/moc_generatereport.cpp"
 #include "EWIEGA46WW/moc_gettask.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "TJWESXFFYF/moc_tasktablemodel.cpp"
 #include "EWIEGA46WW/moc_updatetask.cpp"

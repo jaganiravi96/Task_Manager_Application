@@ -15,6 +15,11 @@ public:
     explicit DeleteTask(QWidget *parent = nullptr);
     ~DeleteTask();
 
+private slots:
+    void on_btnFind_clicked();
+
+    void on_btnDelete_clicked();
+
 private:
     Ui::DeleteTask *ui;
 };

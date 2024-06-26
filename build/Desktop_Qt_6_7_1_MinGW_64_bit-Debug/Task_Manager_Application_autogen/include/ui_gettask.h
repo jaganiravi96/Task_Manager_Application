@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QLabel>
@@ -39,16 +40,17 @@ public:
     QLabel *label_5;
     QLabel *label_7;
     QLabel *label_8;
-    QLineEdit *txtDueDateValue;
     QLineEdit *txtPriorityValue;
     QLineEdit *txtAssigneeValue;
-    QLineEdit *txtStatusvalue;
+    QLineEdit *txtStatusValue;
+    QDateTimeEdit *txtDueDateValue;
+    QLabel *txtStatus;
 
     void setupUi(QDialog *GetTask)
     {
         if (GetTask->objectName().isEmpty())
             GetTask->setObjectName("GetTask");
-        GetTask->resize(400, 452);
+        GetTask->resize(400, 474);
         GetTask->setMaximumSize(QSize(400, 500));
         txtTaskIdFind = new QLineEdit(GetTask);
         txtTaskIdFind->setObjectName("txtTaskIdFind");
@@ -115,11 +117,6 @@ public:
 
         formLayout->setWidget(5, QFormLayout::LabelRole, label_8);
 
-        txtDueDateValue = new QLineEdit(formLayoutWidget);
-        txtDueDateValue->setObjectName("txtDueDateValue");
-
-        formLayout->setWidget(3, QFormLayout::FieldRole, txtDueDateValue);
-
         txtPriorityValue = new QLineEdit(formLayoutWidget);
         txtPriorityValue->setObjectName("txtPriorityValue");
 
@@ -130,11 +127,19 @@ public:
 
         formLayout->setWidget(5, QFormLayout::FieldRole, txtAssigneeValue);
 
-        txtStatusvalue = new QLineEdit(formLayoutWidget);
-        txtStatusvalue->setObjectName("txtStatusvalue");
+        txtStatusValue = new QLineEdit(formLayoutWidget);
+        txtStatusValue->setObjectName("txtStatusValue");
 
-        formLayout->setWidget(6, QFormLayout::FieldRole, txtStatusvalue);
+        formLayout->setWidget(6, QFormLayout::FieldRole, txtStatusValue);
 
+        txtDueDateValue = new QDateTimeEdit(formLayoutWidget);
+        txtDueDateValue->setObjectName("txtDueDateValue");
+
+        formLayout->setWidget(3, QFormLayout::FieldRole, txtDueDateValue);
+
+        txtStatus = new QLabel(GetTask);
+        txtStatus->setObjectName("txtStatus");
+        txtStatus->setGeometry(QRect(110, 430, 151, 31));
 
         retranslateUi(GetTask);
 
@@ -153,6 +158,7 @@ public:
         label_5->setText(QCoreApplication::translate("GetTask", "Priority", nullptr));
         label_7->setText(QCoreApplication::translate("GetTask", "Status", nullptr));
         label_8->setText(QCoreApplication::translate("GetTask", "Assignee", nullptr));
+        txtStatus->setText(QString());
     } // retranslateUi
 
 };

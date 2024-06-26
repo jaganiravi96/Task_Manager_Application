@@ -29,9 +29,9 @@ long int Task::getTaskId()
     return taskId;
 }
 
-void Task::setTitle(string &title)
+void Task::setTitle(string &tl)
 {
-    title = title;
+    title = tl;
 }
 
 string Task::getTitle()
@@ -39,9 +39,9 @@ string Task::getTitle()
     return title;
 }
 
-void Task::setDescription(string &description)
+void Task::setDescription(string &desc)
 {
-    description = description;
+    description = desc;
 }
 
 string Task::getDescription()
@@ -49,9 +49,9 @@ string Task::getDescription()
     return description;
 }
 
-void Task::setDueDate(time_t &dueDate)
+void Task::setDueDate(time_t &dd)
 {
-    dueDate = dueDate;
+    dueDate = dd;
 }
 
 time_t Task::getDueDate()
@@ -59,9 +59,9 @@ time_t Task::getDueDate()
     return dueDate;
 }
 
-void Task::setPriority(string &priority)
+void Task::setPriority(string &pr)
 {
-    priority = priority;
+    priority = pr;
 }
 
 string Task::getPriority()
@@ -69,9 +69,9 @@ string Task::getPriority()
     return priority;
 }
 
-void Task::setStatus(string &status)
+void Task::setStatus(string &sts)
 {
-    status = status;
+    status = sts;
 }
 
 string Task::getStatus()
@@ -79,9 +79,9 @@ string Task::getStatus()
     return status;
 }
 
-void Task::setAssignee(string &assignee)
+void Task::setAssignee(string &asgn)
 {
-    assignee = assignee;
+    assignee = asgn;
 }
 
 string Task::getAssignee()

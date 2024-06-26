@@ -1,7 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
-#include <algorithm>
 #include <ctime>
 #include <list>
 #include <time.h>
@@ -118,7 +116,7 @@ void strUtils::eraseFileLine(string path, int taskId)
 }
 
 // To replace line from the file for given taskId
-void strUtils::replaceFileLine(string path, int taskId, string newline)
+string strUtils::replaceFileLine(string path, int taskId, string newline)
 {
     string line;
     ifstream fin;
@@ -134,6 +132,7 @@ void strUtils::replaceFileLine(string path, int taskId, string newline)
         // write all lines to temp and replace the line marked
         if (line.find(to_string(taskId)) == std::string::npos)
         {
+            cout << "copied line"+ line + "\n";
             temp << line << std::endl;
         }
         else
@@ -149,13 +148,15 @@ void strUtils::replaceFileLine(string path, int taskId, string newline)
     const char *p = path.c_str();
     remove(p);
     rename("temp.txt", p);
+    return "updated";
 }
 
 // Convert Task Object to String Task line
 string strUtils::convertTaskToStr(Task t)
 {
     string str;
-    str = to_string(t.getTaskId()) + "," + t.getTitle() + "," + t.getDescription() + "," + t.getStatus() + "," + timeToStr(t.getDueDate());
+    str = to_string(t.getTaskId()) + "," + t.getTitle() + "," + t.getDescription() + "," + t.getStatus() + "," + timeToStr(t.getDueDate()) + "," +
+          t.getPriority() + "," + t.getAssignee();
     return str;
 }
 
@@ -166,17 +167,31 @@ Task strUtils::convertStrToTask(string taskStr)
     istringstream istr(taskStr);
     string str;
     long int taskId;
+
+    cout << taskStr + "\n";
+
     getline(istr, str, ',');
     taskId = stol(str);
     t.setTaskId(taskId);
+
     getline(istr, str, ',');
     t.setTitle(str);
+
     getline(istr, str, ',');
     t.setDescription(str);
+
     getline(istr, str, ',');
     t.setStatus(str);
+
     getline(istr, str, ',');
     time_t task_time = strToTime(str);
     t.setDueDate(task_time);
+
+    getline(istr, str, ',');
+    t.setPriority(str);
+
+    getline(istr, str, ',');
+    t.setAssignee(str);
+
     return t;
 }

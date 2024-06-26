@@ -1,8 +1,11 @@
 Task_Manager_Application_autogen/timestamp: \
+	C:/Qt/6.7.1/mingw_64/include/QtCore/QAbstractTableModel \
+	C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/q20functional.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/q20memory.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/q20type_traits.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/q23utility.h \
+	C:/Qt/6.7.1/mingw_64/include/QtCore/qabstractitemmodel.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qalgorithms.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qanystringview.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qarraydata.h \
@@ -113,6 +116,7 @@ Task_Manager_Application_autogen/timestamp: \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qutf8stringview.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qvariant.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qvarlengtharray.h \
+	C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qversiontagging.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qxptype_traits.h \
 	C:/Qt/6.7.1/mingw_64/include/QtCore/qyieldcpu.h \
@@ -540,6 +544,8 @@ Task_Manager_Application_autogen/timestamp: \
 	E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/idsequence.h \
 	E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/task.cpp \
 	E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/task.h \
+	E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/tasktablemodel.cpp \
+	E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/tasktablemodel.h \
 	E:/C++_Project/QT_Project/Task_Manager_Application/src/Repository/test.cpp \
 	E:/C++_Project/QT_Project/Task_Manager_Application/src/Repository/test.h \
 	E:/C++_Project/QT_Project/Task_Manager_Application/src/Service/fileutils.cpp \

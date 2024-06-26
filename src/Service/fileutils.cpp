@@ -12,6 +12,7 @@ string file_path = "E:\\C++_Project\\QT_Project\\Task_Manager_Application\\src\\
 
 void fileUtils::writeRecord(string filetext)
 {
+    cout << "\n ###### In fileUtils::writeRecord ###### \n";
     ofstream outputFile;
 
     string file_name = file_path + "\\task_record_" + ut.currentDateTime() + ".txt";
@@ -31,6 +32,7 @@ void fileUtils::writeRecord(string filetext)
 
 Task fileUtils::getRecord(int TaskId)
 {
+    cout << "\n ###### In fileUtils::getRecord ###### \n";
     string date = ut.taskIdToStrDate(TaskId);
     string file_name = file_path + "\\task_record_" + date + ".txt";
 
@@ -52,6 +54,7 @@ Task fileUtils::getRecord(int TaskId)
 
 list<Task> fileUtils::getFileRecord(string date)
 {
+    cout << "\n ###### In fileUtils::getFileRecord ###### \n";
     string file_name = file_path + "\\task_record_" + date + ".txt";
 
     string myText;
@@ -71,6 +74,7 @@ list<Task> fileUtils::getFileRecord(string date)
 
 list<Task> fileUtils::readAllRecord(string from_date, string to_date, string specific_date)
 {
+    cout << "\n ###### In fileUtils::readAllRecord ###### \n";
     list<string> listDate = {};
     list<Task> listRecords = {};
     if (from_date != "" && to_date != "")
@@ -91,14 +95,20 @@ list<Task> fileUtils::readAllRecord(string from_date, string to_date, string spe
 
 void fileUtils::deleteRecord(int TaskId, string date)
 {
+    cout << "\n ###### In fileUtils::deleteRecord ###### \n";
     string file_name = file_path + "\\task_record_" + date + ".txt";
     ut.eraseFileLine(file_name, TaskId);
 }
 
 void fileUtils::updateRecord(int TaskId, string date, Task t)
 {
+    cout << "\n ###### In fileUtils::updateRecord ###### \n";
     string file_name = file_path + "\\task_record_" + date + ".txt";
+    cout << file_path + "\n";
+    cout << file_name + "\n";
+    cout << date + "\n";
     string newline;
     newline = ut.convertTaskToStr(t);
+    cout << newline + "\n";
     ut.replaceFileLine(file_name, TaskId, newline);
 }

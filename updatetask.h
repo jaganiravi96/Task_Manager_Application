@@ -15,6 +15,13 @@ public:
     explicit UpdateTask(QWidget *parent = nullptr);
     ~UpdateTask();
 
+private slots:
+    void on_btnFind_clicked();
+
+    void on_btnUpdate_clicked();
+
+    void resetAllElements();
+
 private:
     Ui::UpdateTask *ui;
 };

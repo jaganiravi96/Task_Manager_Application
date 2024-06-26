@@ -305,6 +305,12 @@
 			null
 		],
 		[
+			"E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/tasktablemodel.h",
+			"MU",
+			"TJWESXFFYF/moc_tasktablemodel.cpp",
+			null
+		],
+		[
 			"E:/C++_Project/QT_Project/Task_Manager_Application/src/Repository/test.h",
 			"MU",
 			"NUUEGJZ23L/moc_test.cpp",
@@ -448,6 +454,11 @@
 		],
 		[
 			"E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/task.cpp",
+			"MU",
+			null
+		],
+		[
+			"E:/C++_Project/QT_Project/Task_Manager_Application/src/Model/tasktablemodel.cpp",
 			"MU",
 			null
 		],

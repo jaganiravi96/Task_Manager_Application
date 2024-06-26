@@ -28,6 +28,7 @@ public:
     QPushButton *btnFind;
     QTableView *tableViewDelete;
     QPushButton *btnDelete;
+    QLabel *tstStatus;
 
     void setupUi(QDialog *DeleteTask)
     {
@@ -49,7 +50,10 @@ public:
         tableViewDelete->setGeometry(QRect(30, 70, 451, 231));
         btnDelete = new QPushButton(DeleteTask);
         btnDelete->setObjectName("btnDelete");
-        btnDelete->setGeometry(QRect(190, 330, 83, 29));
+        btnDelete->setGeometry(QRect(190, 320, 83, 29));
+        tstStatus = new QLabel(DeleteTask);
+        tstStatus->setObjectName("tstStatus");
+        tstStatus->setGeometry(QRect(110, 360, 261, 20));
 
         retranslateUi(DeleteTask);
 
@@ -62,6 +66,7 @@ public:
         label->setText(QCoreApplication::translate("DeleteTask", "Task Id :", nullptr));
         btnFind->setText(QCoreApplication::translate("DeleteTask", "Find", nullptr));
         btnDelete->setText(QCoreApplication::translate("DeleteTask", "Delete", nullptr));
+        tstStatus->setText(QString());
     } // retranslateUi
 
 };

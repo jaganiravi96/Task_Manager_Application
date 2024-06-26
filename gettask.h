@@ -15,6 +15,9 @@ public:
     explicit GetTask(QWidget *parent = nullptr);
     ~GetTask();
 
+private slots:
+    void on_btnFind_clicked();
+
 private:
     Ui::GetTask *ui;
 };

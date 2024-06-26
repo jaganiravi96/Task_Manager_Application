@@ -12,3 +12,15 @@ DisplayAllTask::~DisplayAllTask()
 {
     delete ui;
 }
+
+void DisplayAllTask::on_btnDisplay_clicked()
+{
+
+}
+
+
+void DisplayAllTask::on_btnDisplay_2_clicked()
+{
+
+}
+

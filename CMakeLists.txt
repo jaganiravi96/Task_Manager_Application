@@ -18,6 +18,7 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
 )
+set(CMAKE_CXX_SOURCE_FILE_EXTENSIONS C;M;c++;cc;cpp;cxx;mm;CPP;h;txt)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Task_Manager_Application
@@ -36,6 +37,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         src/Service/strutils.h src/Service/strutils.cpp
         src/Service/taskservice.h src/Service/taskservice.cpp
         src/Repository/test.h src/Repository/test.cpp
+        src/Model/tasktablemodel.h src/Model/tasktablemodel.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Task_Manager_Application APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

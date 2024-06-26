@@ -1,12 +1,5 @@
 #include <iostream>
-#include <fstream>
-#include <vector>
-#include <algorithm>
-#include <ctime>
 #include <list>
-#include <time.h>
-#include <iomanip>
-#include <sstream>
 
 #include "../Model/task.h"
 #include "../Service/fileutils.h"
@@ -35,20 +28,23 @@ void taskService::displayAllTask(string from_date, string to_date, string specif
 
     for (Task task : task_list)
     {
-        cout << " " << task.getTaskId() << " | " << task.getTitle() << " | " << task.getDescription()
-             << " | " << strutil.timeToStr(task.getDueDate()) << " | " << task.getStatus();
+        cout << "TaskID : " << task.getTaskId() << " | Title : " << task.getTitle() << " | Description : " << task.getDescription()
+        << " | DueDate " << strutil.timeToStr(task.getDueDate()) << " | Priority :" << task.getPriority()
+        << " | Status :" << task.getStatus() << " | Assignee :" << task.getAssignee();
         cout << endl;
     }
     cout << endl;
 }
 
-void taskService::getTask(int TaskId)
+Task taskService::getTask(int TaskId)
 {
     cout << "\n ###### In getTask() ###### \n";
     Task task = fileutil.getRecord(TaskId);
-    cout << " " << task.getTaskId() << " | " << task.getTitle() << " | " << task.getDescription()
-         << " | " << strutil.timeToStr(task.getDueDate()) << " | " << task.getStatus();
+    cout << "TaskID : " << task.getTaskId() << " | Title : " << task.getTitle() << " | Description : " << task.getDescription()
+    << " | DueDate " << strutil.timeToStr(task.getDueDate()) << " | Priority :" << task.getPriority()
+    << " | Status :" << task.getStatus() << " | Assignee :" << task.getAssignee();
     cout << endl;
+    return task;
 }
 
 void taskService::deleteTask(int TaskId)
