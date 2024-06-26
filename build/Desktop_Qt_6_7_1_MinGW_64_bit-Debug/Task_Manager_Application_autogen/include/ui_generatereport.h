@@ -44,7 +44,7 @@ public:
         tableWidget->setGeometry(QRect(10, 50, 371, 221));
         txtStatus = new QLabel(GenerateReport);
         txtStatus->setObjectName("txtStatus");
-        txtStatus->setGeometry(QRect(150, 160, 111, 21));
+        txtStatus->setGeometry(QRect(70, 100, 251, 111));
 
         retranslateUi(GenerateReport);
 

@@ -25,7 +25,7 @@ public:
 
     void eraseFileLine(string path, int taskId);
 
-    string replaceFileLine(string filepath, string path, int taskId, string newline);
+    string replaceFileLine(std::string file_path, std::string path, int taskId, string newline);
 
     string convertTaskToStr(Task t);
 

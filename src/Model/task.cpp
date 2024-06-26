@@ -19,9 +19,9 @@ Task::Task(string tl, string desc, time_t dd, string pr, string sts, string asgn
     assignee = asgn;
 }
 
-void Task::setTaskId(long int &taskId)
+void Task::setTaskId(long int &tId)
 {
-    taskId = taskId;
+    taskId = tId;
 }
 
 long int Task::getTaskId()

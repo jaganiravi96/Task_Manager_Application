@@ -115,24 +115,22 @@ void strUtils::eraseFileLine(string path, int taskId)
     rename("temp.txt", p);
 }
 
-// To replace line from the file for given taskId
 string strUtils::replaceFileLine(string file_path, string path, int taskId, string newline)
 {
-    string line;
-    ifstream fin;
+    std::string line;
+    std::ifstream fin;
 
     fin.open(path);
     // contents of path must be copied to a temp file then
     // renamed back to the path file
-    ofstream temp;
-    temp.open(file_path+"\\temp.txt");
+    std::ofstream temp;
+    temp.open("temp.txt");
 
     while (getline(fin, line))
     {
         // write all lines to temp and replace the line marked
         if (line.find(to_string(taskId)) == std::string::npos)
         {
-            cout << "copied line"+ line + "\n";
             temp << line << std::endl;
         }
         else
@@ -150,6 +148,8 @@ string strUtils::replaceFileLine(string file_path, string path, int taskId, stri
     rename("temp.txt", p);
     return "updated";
 }
+
+// To replace line from the file for given taskId
 
 // Convert Task Object to String Task line
 string strUtils::convertTaskToStr(Task t)

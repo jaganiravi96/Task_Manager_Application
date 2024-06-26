@@ -18,7 +18,7 @@ UpdateTask::~UpdateTask()
 
 void UpdateTask::on_btnFind_clicked()
 {
-    qDebug()<<"in AGetTask::on_btnFind_clicked()";
+    qDebug()<<"in UpdateTask::on_btnFind_clicked()";
 
     QString taskId = ui->txtTaskIdFind->text();
 
@@ -47,7 +47,7 @@ void UpdateTask::on_btnFind_clicked()
 
 void UpdateTask::on_btnUpdate_clicked()
 {
-    qDebug()<<"in AddTask:: on_btnSave_clicked()";
+    qDebug()<<"in UpdateTask:: on_btnUpdate_clicked()";
 
     QString taskId           = ui->txtTaskIdValue->text();
     QString sTitle           = ui->txtTitleValue->text();
@@ -56,6 +56,8 @@ void UpdateTask::on_btnUpdate_clicked()
     QString sPriority        = ui->txtPriorityValue->text();
     QString sStatus          = ui->txtStatusValue->text();
     QString sAssignee        = ui->txtAssigneeValue->text();
+
+    long int task_id =  stoll(taskId.toUtf8().constData());
 
     if(sTitle.isEmpty() && sDateTime.isNull())
     {
@@ -69,7 +71,8 @@ void UpdateTask::on_btnUpdate_clicked()
         time_t temp =  ut.strToTime(sDateTime.toString("yyyy-MM-dd hh:mm:ss").toStdString());
         Task task(sTitle.toUtf8().constData(), sDescription.toUtf8().constData(), temp, sPriority.toUtf8().constData(),
                   sStatus.toUtf8().constData(), sAssignee.toUtf8().constData());
-        qDebug() << "TaskID : " << task.getTaskId() << " | Title : " << task.getTitle() << " | Description : " << task.getDescription()
+        task.setTaskId(task_id);
+        qDebug() << "here TaskID : " << task.getTaskId() << " | Title : " << task.getTitle() << " | Description : " << task.getDescription()
                  << " | DueDate " << ut.timeToStr(task.getDueDate()) << " | Priority :" << task.getPriority()
                  << " | Status :" << task.getStatus() << " | Assignee :" << task.getAssignee();
         taskService taskservice;
