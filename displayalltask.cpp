@@ -20,15 +20,26 @@ void DisplayAllTask::on_btnDisplay_clicked()
 {
     qDebug()<<"DisplayAllTask::on_btnDisplay_clicked";
 
-    QDateTime fromDate = ui->dtFromDate->dateTime();
-    QDateTime toDate   = ui->dtToDate->dateTime();
+    QDateTime fromDate     = ui->dtFromDate->dateTime();
+    QDateTime toDate       = ui->dtToDate->dateTime();
+    QDateTime specificDate = ui->dtSpecificDate->dateTime();
 
     string fromStrDate = fromDate.toString("yyyy-MM-dd").toStdString();
     string toStrDate   = toDate.toString("yyyy-MM-dd").toStdString();
+    string specificStrDate   = specificDate.toString("yyyy-MM-dd").toStdString();
+
+    qDebug() << specificStrDate;
 
     strUtils ut;
     taskService taskservice;
-    list<Task> task_list = taskservice.displayAllTask(fromStrDate, toStrDate);
+    list<Task> task_list;
+    if(specificStrDate == "2000-01-01") {
+        task_list = taskservice.displayAllTask(fromStrDate, toStrDate);
+    }
+    else{
+        task_list = taskservice.displayAllTask(specificStrDate, 20);
+    }
+
 
     QStringList headers;
     headers << "Task ID" << "Title" << "Description" << "Due Date" << "Priority" << "Status" << "Assignee";
@@ -74,7 +85,9 @@ void DisplayAllTask::on_btnDisplay_clicked()
 void DisplayAllTask::on_btnReset_clicked()
 {
     ui->tableWidget->reset();
+    ui->tableWidget->clear();
     ui->dtFromDate->clear();
     ui->dtToDate->clear();
+    ui->dtSpecificDate->clear();
 }
 

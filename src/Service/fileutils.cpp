@@ -83,7 +83,7 @@ list<Task> fileUtils::readAllRecord(string from_date, string to_date, string spe
     }
     else
     {
-        listDate.push_front(ut.currentDateTime());
+        listDate.push_front(specific_date);
     }
 
     for (string d : listDate)

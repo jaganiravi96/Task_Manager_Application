@@ -58,9 +58,9 @@
   <widget class="QLabel" name="txtStatus">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>50</x>
      <y>100</y>
-     <width>251</width>
+     <width>281</width>
      <height>111</height>
     </rect>
    </property>

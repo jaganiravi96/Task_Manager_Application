@@ -12,7 +12,9 @@ public:
 
     string addTask(Task t);
 
-    list<Task> displayAllTask(string from_date = "", string to_date = "", string specific_date = "");
+    list<Task> displayAllTask(string from_date = "", string to_date = "");
+
+    list<Task> displayAllTask(string specific_date, int count);
 
     Task getTask(int TaskId);
 

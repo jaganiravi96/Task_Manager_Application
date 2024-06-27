@@ -23,10 +23,10 @@ string taskService::addTask(Task t)
     return "true";
 }
 
-list<Task> taskService::displayAllTask(string from_date, string to_date, string specific_date)
+list<Task> taskService::displayAllTask(string from_date, string to_date)
 {
     cout << "\n ###### In displayTasks() ###### \n";
-    list<Task> task_list = fileutil.readAllRecord(from_date, to_date, specific_date);
+    list<Task> task_list = fileutil.readAllRecord(from_date, to_date, "");
 
     for (Task task : task_list)
     {
@@ -37,6 +37,22 @@ list<Task> taskService::displayAllTask(string from_date, string to_date, string 
     }
     cout << endl;
     return task_list;
+}
+
+list<Task> taskService::displayAllTask(string specific_date, int count)
+{
+    cout << "\n ###### In displayTasks() ###### \n";
+    list<Task> task_list = fileutil.readAllRecord("", "", specific_date);
+
+    int temp = 0;
+    std::list<Task> limitedTasks;
+
+    for (auto it = task_list.begin(); it != task_list.end() && temp < count; ++it, ++temp) {
+        limitedTasks.push_back(*it);
+    }
+
+    cout << endl;
+    return limitedTasks;
 }
 
 Task taskService::getTask(int TaskId)

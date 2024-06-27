@@ -19,6 +19,9 @@
   <property name="windowTitle">
    <string>Task Manager 1.0</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(50, 50, 50)</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="AddTaskButton">
     <property name="geometry">
@@ -28,6 +31,9 @@
       <width>91</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(100, 100, 80)</string>
     </property>
     <property name="text">
      <string>Add Task</string>
@@ -51,6 +57,9 @@
       <height>29</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(100, 100, 80)</string>
+    </property>
     <property name="text">
      <string>Update Task</string>
     </property>
@@ -63,6 +72,9 @@
       <width>91</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(100, 100, 80)</string>
     </property>
     <property name="text">
      <string>Delete Task</string>
@@ -77,6 +89,9 @@
       <height>29</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(100, 100, 80)</string>
+    </property>
     <property name="text">
      <string>Display All Task</string>
     </property>
@@ -89,6 +104,9 @@
       <width>91</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(100, 100, 80)</string>
     </property>
     <property name="text">
      <string>Get Task</string>
@@ -103,20 +121,24 @@
       <height>29</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(100, 100, 80)</string>
+    </property>
     <property name="text">
      <string>Generate Report</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>25</height>
-    </rect>
-   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>751</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
